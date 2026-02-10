@@ -68,6 +68,6 @@ Python + Pandas practice
 ## 👤 Author
 
 Tushar Vala
-📧 GitHub: https://github.com/tushar123851
+
 
 
