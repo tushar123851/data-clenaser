@@ -1,0 +1,80 @@
+
+PART C: FINAL CLEAN DATASET – REPORT
+
+1. Final Cleaned Dataset Overview
+---------------------------------
+The final dataset was prepared after performing systematic data cleaning steps
+to ensure data quality, consistency, and usability for analysis and visualization.
+All missing values were treated using appropriate imputation techniques, and
+outliers were handled using statistically suitable methods without removing records.
+
+As a result, the dataset retains all original records while ensuring numerical
+stability and reduced skewness.
+
+2. Missing Value Treatment
+--------------------------
+Missing values were handled based on the nature of the variables:
+
+• Numerical columns (age, BMI, cholesterol, glucose):
+  - Median imputation was used.
+  - Median was preferred over mean because it is robust to outliers
+    and preserves the central tendency of skewed medical data.
+
+• Categorical columns (gender, region):
+  - Mode imputation was applied.
+  - This maintains the most frequently occurring category without
+    introducing artificial values.
+
+This approach ensured that no rows were removed and all variables
+remained meaningful for further analysis.
+
+3. Most Effective Imputation Strategy
+-------------------------------------
+Median imputation for numerical variables proved to be the most effective strategy.
+
+Reasons:
+• Resistant to extreme values.
+• Maintains realistic patient measurements.
+• Prevents distortion of distributions.
+
+Mode imputation was effective for categorical variables as it preserved
+category dominance and interpretability.
+
+4. Outlier Handling Method
+--------------------------
+Outliers were handled using Percentile Capping (Winsorization):
+
+• Lower bound: 1st percentile
+• Upper bound: 99th percentile
+
+Instead of deleting records, extreme values were capped within acceptable limits.
+
+This method was selected because:
+• Medical datasets naturally contain extreme but valid values.
+• Removing records could lead to loss of critical patient information.
+• Percentile capping reduces the impact of outliers while preserving data size.
+
+Among all methods tested, percentile capping preserved data quality best.
+
+5. Impact of Data Cleaning on Dataset Usability
+-----------------------------------------------
+Data cleaning significantly improved dataset usability:
+
+• Eliminated missing values, enabling seamless analysis.
+• Reduced the influence of extreme outliers.
+• Improved data consistency across variables.
+• Made the dataset suitable for:
+  - Power BI dashboards
+  - Statistical analysis
+  - Machine learning models
+  - Visualization (univariate, bivariate, multivariate)
+
+The final cleaned dataset is reliable, analysis-ready, and suitable
+for real-world healthcare analytics applications.
+
+6. Conclusion
+--------------
+The applied imputation and outlier handling techniques successfully
+enhanced data quality while preserving the original structure and
+information content of the dataset. The cleaned dataset is now
+robust, interpretable, and ready for advanced analysis and reporting.
